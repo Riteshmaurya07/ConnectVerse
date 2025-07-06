@@ -1,9 +1,11 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import Routes from './src/Routes'
+import React from 'react';
+import { AuthProvider } from './src/Context/AuthContext';
+import Routes from './src/Routes';
 
 export default function App() {
   return (
-  <Routes />
-  )
+    <AuthProvider>
+      <Routes />
+    </AuthProvider>
+  );
 }
